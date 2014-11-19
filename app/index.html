@@ -34,21 +34,85 @@
         <p class='lead'>we knew which restaurants needed a health inspection based off of the words used in user reviews?</p>
       </div>
 
-      <!-- <div class="row marketing"> -->
-      <!--   <div class="col-lg-6"> -->
-      <!--     <h4>HTML5 Boilerplate</h4> -->
-      <!--     <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p> -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Motivation</h2>
 
-      <!--     <h4>Sass</h4> -->
-      <!--     <p>Sass is a mature, stable, and powerful professional grade CSS extension language.</p> -->
+          <img class='img-responsive' src='http://bmj2k.files.wordpress.com/2011/02/ratings1.jpg'>
 
+          <p>
+            Based off of the New York City Department of Health and Mental Hygiene (NYCDOHMH) and its restaurant inspection information, there are roughly 24,000 restaurants in the city. That's a lot of ground to cover if you're a restaurant sanitation inspector. So the purpose of this project is to see if Foursquare tips written by users can help identify and prioritize restaurants for review by the NYCDOHMH.
+          </p>
 
-      <!--     <h4>Bootstrap</h4> -->
-      <!--     <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p> -->
+          <p>
+            See the full source code and project work <a href='https://github.com/adrianbautista/foursquare-restaurant-grades' target='_blank'>here</a>.
+          </p>
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Data Acquisition and Exploration</h2>
 
-      <!--   </div> -->
-      <!-- </div> -->
+          <p>
+            I acquired the restaurant grade data in CSV form through <a href='https://nycopendata.socrata.com/' target='_blank'>NYC Open Data</a>. The CSV contained multiple inspection dates and code violations per restaurant, so the data was reduced to the latest inspection date per restaurant that had a grade value present. This produced a dataset in which each row was a unique restaurant with a letter grade ('A', 'B', 'C', 'Z', 'Pending', 'Not graded').
+          </p>
+
+          <p>
+            Using the address and restaruant name from the restaurant grade data, I queried <a href='https://developer.foursquare.com/' target='_blank'>Foursquare's API</a>. If valid responses were returned, I then took the first result and queried the API again for detailed venue information. Foursquare rating, user check-in counts, price tier, and user tips were parsed from this API response. The rating, price, and check-in count were joined to the grade dataframe, while tips were stored in separate dataframe.
+          </p>
+
+          <hr>
+
+          <p>
+            My initial approach to this project was to see if there was any correlation between a restaurant's grade and its numeric rating on Foursquare. Unpopular restaurants on Foursquare could be the result of poor sanitation habits was one of the original hypotheses. But after doing a rough plot of these two data points and observing basic computed values, such as mean, no immediate correlation was noticeable.
+          </p>
+        
+          <img class='img-responsive' src='images/describe-early.png'>
+
+          <img class='img-responsive' src='images/scatterplot.png'>
+
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Analyses Performed</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Conclusions</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Next Steps</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Resources</h2>
+
+          <span class='subsection__heading'>Data Sources</span>
+
+          <ul>
+            <li>
+              <a href='https://nycopendata.socrata.com/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/xx67-kt59?' target='_blank'>NYC OpenData: Restaurant Inspection Results</a> 
+            </li>
+            <li>
+              <a href='https://developer.foursquare.com/' target='_blank'>Foursquare API</a> 
+            </li>
+            <li>
+              <a href='http://data.nycprepared.org/dataset/nyc-zip-code-tabulation-areas' target='_blank'>NYC Zipcode Tabulation Area</a> 
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <div class="footer">
         <p>

@@ -37,6 +37,27 @@ body {
   }
 }
 
+h2 {
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.img-responsive {
+  margin-bottom: 25px;
+}
+
+.subsection__heading {
+  color: #959595;
+  display: block;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
