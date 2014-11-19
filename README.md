@@ -1,6 +1,6 @@
 # Foursquare Restaurant Grades
 
-The data and work in this repoistory attempts to identify any relationship between the tips Foursquare users leave for a NYC restaurant and the restaurant's sanitation grade from the NYC Department of Health and Mental Hygiene (NYCDOHMH). It also is my final project for the Fall 2014 session of General Assembly's [Data Science course](https://generalassemb.ly/education/data-science/). 
+The data and work in this repoistory attempts to identify any relationship between the tips Foursquare users leave for a NYC restaurant and the restaurant's sanitation grade from the NYC Department of Health and Mental Hygiene (NYCDOHMH). It is also my final project for the Fall 2014 session of General Assembly's [Data Science course](https://generalassemb.ly/education/data-science/).
 
 Also in this repoistory is old work for my first project idea about Hollywood films and China box office results.
 
