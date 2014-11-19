@@ -429,7 +429,8 @@ module.exports = function (grunt) {
     'copy:dist',
     'rev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'buildcontrol:pages'
   ]);
 
   grunt.registerTask('default', [
