@@ -65,21 +65,22 @@ module.exports = function (grunt) {
           '.tmp/styles/{,*/}*.css',
           '<%= config.app %>/images/{,*/}*'
         ]
-      },
-      buildcontrol: {
-        options: {
-          dir: 'dist',
-          commit: true,
-          push: true,
-          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-        },
-        pages: {
-          options: {
-            remote: 'git@github.com:adrianbautista/foursquare-square-restaurant-grades.git',
-            branch: 'gh-pages'
-          }
-        },
       }
+    },
+
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:adrianbautista/foursquare-restaurant-grades.git',
+          branch: 'gh-pages'
+        }
+      },
     },
 
     // The actual grunt server settings
