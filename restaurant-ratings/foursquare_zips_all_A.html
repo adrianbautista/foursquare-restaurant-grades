@@ -48,15 +48,15 @@ function makeMap(error, data_1,gjson_1) {
 
     
     var color = d3.scale.threshold()
-              .domain([0.7000000000000001, 0.9, 1.0, 1.0, 1.0])
-              .range(['#FEEBE2', '#FCC5C0', '#FA9FB5', '#F768A1', '#DD3497', '#AE017E']);
+              .domain([0.5, 0.8, 0.85, 0.9, 0.95, 0.99])
+              .range(['#FEEBE2', '#FCC5C0', '#FA9FB5', '#F768A1', '#DD3497', '#AE017E', '#7A0177']);
     
 
     var map = L.map('map').setView([40.714623, -74.006605], 11);
 
-    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.jpg', {
         maxZoom: 18,
-        attribution: 'Map data (c) <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
     }).addTo(map);
 
     
