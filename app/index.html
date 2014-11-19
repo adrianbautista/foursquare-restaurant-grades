@@ -67,18 +67,29 @@
           <p>
             My initial approach to this project was to see if there was any correlation between a restaurant's grade and its numeric rating on Foursquare. Unpopular restaurants on Foursquare could be the result of poor sanitation habits was one of the original hypotheses. But after doing a rough plot of these two data points and observing basic computed values, such as mean, no immediate correlation was noticeable.
           </p>
-        
+
           <img class='img-responsive' src='images/describe-early.png'>
 
           <img class='img-responsive' src='images/scatterplot.png'>
 
           <hr>
+
+          <p>
+            This caused the project to instead refocus on the textual tip data provided by Foursquare users. The tip dataframe was joined with the restaurant grade dataframe based on foursquare ID. Then each Foursquare tip in the dataframe was tokenized and broken up into parts of speech using <a href='https://github.com/nltk/nltk' target='_blank'>NLTK</a>. Adjectives were extracted from these word vectors and transformed into a sparse dummy matrix in which each feature was an adjective. An adjective is only included in the adjective dummy dataframe if it appears in more than 10 tips.
+          </p>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-12">
           <h2>Analyses Performed</h2>
+
+          <p>Check out the regression models in detail <a href='http://nbviewer.ipython.org/github/adrianbautista/foursquare-restaurant-grades/blob/master/restaurant-ratings/foursquare-tip-sentiment-grade.ipynb' target='_blank'>here</a>.
+
+          <hr>
+
+          <p>Aside from evaluating the scores produced by different regression models when predicting a restaurant as grade "A" or grade "C", I also mapped out how a naive-bayes multinomial regression scores by NYC zipcode.</p>
+
         </div>
       </div>
 
